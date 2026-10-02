@@ -1,0 +1,29 @@
+# Dependencies
+/node_modules/
+
+# Next.js build output
+/.next/
+/out/
+
+# Test and coverage output
+/coverage/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and diagnostics
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Local editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+
+# TypeScript incremental build information
+*.tsbuildinfo
