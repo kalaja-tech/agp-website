@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { startHeroCircuit } from "./hero-circuit";
 
 const services = [
@@ -124,7 +125,7 @@ export default function Home() {
     scroll(); window.addEventListener("scroll", scroll, { passive: true }); return () => window.removeEventListener("scroll", scroll);
   }, []);
   return <>
-    <header className="top"><div className="wrap"><a className="logo" href="#top"><Bolt />AGP <span>SERVICE</span></a><nav><a href="#sherbimet">Servizi</a><a href="#puna">Come lavoriamo</a><a href="#kontakt">Contatti</a><a className="call" href="tel:+355690000000">Chiama</a></nav></div></header>
+    <header className="top"><div className="wrap"><a className="logo" href="#top" aria-label="AGP Service"><Image src="/logo/agp-mark-white.svg" alt="" width={34} height={31} priority />AGP <span>SERVICE</span></a><nav><a href="#sherbimet">Servizi</a><a href="#puna">Come lavoriamo</a><a href="#kontakt">Contatti</a><a className="call" href="tel:+355690000000">Chiama</a></nav></div></header>
     <main>
       <section className="hero" id="top"><CircuitCanvas /><div className="hero-shade"/><div className="hero-content"><p className="eyebrow">Elettricità e sicurezza per la tua casa</p><h1><span>AGP</span><span>SERVICE</span></h1><p className="subhead">Impianti elettrici, telecamere di sicurezza, allarmi e sistemi smart per case, appartamenti e aziende a Tirana e dintorni.</p><div className="actions"><a className="button filled" href="#kontakt">Richiedi un preventivo gratuito</a><a className="button outlined" href="#sherbimet">Scopri i servizi</a></div></div><a className="scroll-cue" href="#sherbimet">Scorri <i/></a></section>
       <section className="marquee" aria-label="Servizi"><div>{[...services, ...services].map((service, i) => <span key={i}>{service[1]} <Bolt /></span>)}</div></section>
